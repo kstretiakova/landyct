@@ -5,6 +5,8 @@
   |============================
 */
 /* Common styles */
+@import url('../../assets/fonts/Impact/stylesheet.css');
+
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
@@ -12,7 +14,6 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./firstsection.css');
+@import url('./secondsection.css');
 @import url('./footer.css');
