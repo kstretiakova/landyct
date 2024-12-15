@@ -1,11 +1,17 @@
 .header {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 20px;
+    margin-top: 20px;
+    background-color: transparent; /* Прозорий фон */
+    box-shadow: none; /* Забираємо тінь, якщо вона є */
+    position: absolute; /* Фіксуємо хедер поверх фону */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Хедер залишається поверх секції */
+    padding-top:  20px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -28,9 +34,9 @@ nav {
     align-items: center;
 }
 
-nav a {
+.menu-name {
     text-decoration: none;
-    color: #333;
+    color: #e7e1e1;
     font-size: 18px;
     font-weight: 500;
     position: relative;
@@ -38,7 +44,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #ab0707;
 }
 
 nav a::after {
