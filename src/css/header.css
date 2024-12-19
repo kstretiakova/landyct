@@ -1,13 +1,22 @@
 .header {
-    margin-top: 20px;
-    background-color: transparent; /* Прозорий фон */
-    box-shadow: none; /* Забираємо тінь, якщо вона є */
-    position: absolute; /* Фіксуємо хедер поверх фону */
+    background: rgba(255, 255, 255, 0.9); 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Хедер залишається поверх секції */
-    padding-top:  20px;
+    z-index: 10;
+    padding: 25px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(8px); 
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.2), rgba(0,0,0,0));
+    z-index: -1;
 }
 
 .container {
@@ -19,35 +28,44 @@
 }
 
 .header-logo {
-    font-family: Arial, sans-serif;
-    font-size: 32px; 
-    font-weight: bold; 
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
     background: linear-gradient(45deg, #461e18, #6f4a27, #ae9153, #e9d9bb, #a2835f, #89542e); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-decoration: none; 
-  }
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.header-logo:hover {
+    color: #007bff;
+}
 
 nav {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
 .menu-name {
     text-decoration: none;
-    color: #e7e1e1;
-    font-size: 18px;
+    color: #333;
+    font-size: 16px;
     font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #ab0707;
+.menu-name:hover {
+    color: #007bff;
+    transform: translateY(-2px);
 }
 
-nav a::after {
+.menu-name::after {
     content: '';
     display: block;
     width: 0;
@@ -55,28 +73,30 @@ nav a::after {
     background: #007bff;
     transition: width 0.3s;
     position: absolute;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
 }
 
-nav a:hover::after {
+.menu-name:hover::after {
     width: 100%;
 }
 
 .apply-button {
-    padding: 10px 25px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
     border: none;
-    border-radius: 25px;
-    font-size: 16px;
+    border-radius: 30px;
+    font-size: 14px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .apply-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: scale(1.05);
 }
