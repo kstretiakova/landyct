@@ -1,0 +1,176 @@
+.jobs-section {
+    margin-top: 60px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+    margin-top: 60px;
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin: 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    gap: 16px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    background-color: #fff;
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar button:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+    transform: translateY(-3px);
+}
+
+.search-bar button:active {
+    transform: translateY(0);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.filters select {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filters select:hover {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 0 4px rgba(255, 126, 95, 0.2);
+}
+
+/* Jobs Section */
+.jobs {
+    margin-top: 24px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.job {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.job:hover {
+    background-color: #f2f6fc;
+    transform: translateX(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.job h3 {
+    color: #0056b3;
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.job p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Apply Button */
+.apply-btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn:hover {
+    background: linear-gradient(90deg, #5b86e5, #36d1dc);
+    transform: scale(1.05);
+}
+
+.apply-btn:active {
+    transform: scale(1.02);
+}
+
+.apply-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(86, 204, 242, 0.5);
+}

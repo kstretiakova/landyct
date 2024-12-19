@@ -1,0 +1,47 @@
+<section id="about" class="jobs-section">
+    <div class="container">
+        <div class="content-wrapper">
+            <h2>Job Listings</h2>
+
+            <div class="search-bar">
+                <input type="text" id="keyword" placeholder="Job Title, Phrase or Keyword">
+                <button onclick="filterJobs()">Search</button>
+            </div>
+
+            <div class="filters">
+                <select id="jobType">
+                    <option value="">Job Type</option>
+                    <option value="Temporary">Temporary</option>
+                    <option value="Day Work">Day Work</option>
+                    <option value="Seasonal">Seasonal</option>
+                    <option value="Permanent">Permanent</option>
+                    <option value="Shoreside">Shoreside</option>
+                </select>
+                <select id="yachtType">
+                    <option value="">Yacht Type</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Sailing">Sailing</option>
+                </select>
+                <select id="position">
+                    <option value="">Position</option>
+                    <option value="Galley">Galley</option>
+                    <option value="Interior">Interior</option>
+                    <option value="Deck">Deck</option>
+                    <option value="Engineering">Engineering</option>
+                </select>
+                <select id="vesselSize">
+                    <option value="">Vessel Sizes</option>
+                    <option value="0-30m">0-30m</option>
+                    <option value="31m-50m">31m-50m</option>
+                    <option value="51m-80m">51m-80m</option>
+                    <option value="81m-100m">81m-100m</option>
+                    <option value="101m+">101m+</option>
+                </select>
+            </div>
+
+            <div class="jobs" id="jobList">
+                <!-- Jobs will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</section>
