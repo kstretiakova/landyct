@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/landyct/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/landyct/assets/index-D2jaFzOZ.css">
+    <link rel="stylesheet" crossorigin href="/landyct/assets/index-ucoKswcG.css">
   </head>
   <body>
     <header class="header">
@@ -35,11 +35,14 @@
     <div class="hero-content">
       <h1>Your Vision, Our Mission</h1>
       <p>Empowering individuals with the tools and skills to achieve their dreams. Join us and take the first step towards your future today.</p>
-      <a href="#get-started" class="hero-button">Get Started</a>
+      <div class="button-group">
+        <a href="#jobs" class="hero-button">Find a Job</a>
+        <a href="#crew" class="hero-button">Find a Crew</a>
+      </div>
     </div>
   </div>
 </section>
-      <section id="about" class="jobs-section">
+      <section id="jobs" class="jobs-section">
     <div class="container">
         <div class="content-wrapper">
             <h2>Job Listings</h2>
@@ -87,6 +90,52 @@
     </div>
 </section>
 
+      <section id="apply" class="apply-section">
+    <div class="container">
+        <div class="content-wrapper-apply-split">
+            <!-- Відео -->
+            <div class="apply-video">
+                <video autoplay loop muted>
+                    <source src="/landyct/assets/Video-yDB1l-kx.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Форма -->
+            <div class="apply-form-wrapper">
+                <h2>Apply for a Position</h2>
+                <form id="applyForm">
+                    <div class="form-group">
+                        <label for="jobPosition">Job Name Position</label>
+                        <input type="text" id="jobPosition" name="jobPosition" placeholder="Enter the position" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv">Upload Your CV</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        <label for="cv" class="file-upload-label">
+                            <i class="icon-folder"></i> Choose File
+                        </label>
+                    </div>
+                    <button type="submit" class="apply-button">Apply</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+      
     </main>
 
     <footer class="footer">
