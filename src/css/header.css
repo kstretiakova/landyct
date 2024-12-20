@@ -31,7 +31,7 @@
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: bold;
-    background: linear-gradient(45deg, #461e18, #6f4a27, #ae9153, #e9d9bb, #a2835f, #89542e); 
+    background: linear-gradient(50deg, #3c5875, #719dcc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -81,7 +81,7 @@ nav {
     width: 100%;
 }
 
-.apply-button {
+.apply-button-header {
     padding: 10px 20px;
     background: linear-gradient(90deg, #007bff, #0056b3);
     color: #fff;
@@ -96,7 +96,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.apply-button:hover {
+.apply-button-header:hover {
     background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: scale(1.05);
 }
