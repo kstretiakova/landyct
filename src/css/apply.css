@@ -1,0 +1,132 @@
+/* Базовий стиль для секції Apply */
+.apply-section {
+    position: relative;
+    margin: 50px 0;
+    padding: 0;
+}
+
+.content-wrapper-apply-split {
+    display: flex;
+    align-items: stretch; /* Забезпечує однакову висоту блоків */
+    flex-wrap: wrap;
+}
+
+.apply-video {
+    flex: 1;
+    min-width: 300px;
+    max-height: 900px;
+    overflow: hidden;
+}
+
+.apply-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apply-form-wrapper {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрує контент по вертикалі */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для заголовку */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Стилі для форми */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Сучасний стиль для кнопки */
+.apply-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Завантаження файлів */
+.file-upload-label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.icon-folder {
+    margin-right: 5px;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #007bff;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .content-wrapper-apply-split {
+        flex-direction: column;
+    }
+
+    .apply-video,
+    .apply-form-wrapper {
+        flex: none;
+        max-height: none;
+    }
+}

@@ -9,35 +9,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const jobs = [
         {
             title: "Service Stewardess",
-            type: "Permanent",
             yacht: "Motor",
             position: "Interior",
-            vesselSize: "31m-50m",
-            description: "Deliver high-end service aboard a luxurious motor yacht."
+            vesselSize: "31m–50m",
+            type: "Permanent",
+            description: "Provide exceptional service for guests aboard a luxurious new build yacht. A solid knowledge of cocktails and wine is required.",
+            location: "50m Private Yacht, Mediterranean",
+            salary: "€4,500/month",
+            startDate: "Mid-February"
         },
         {
             title: "Deckhand",
-            type: "Seasonal",
             yacht: "Sailing",
             position: "Deck",
-            vesselSize: "51m-80m",
-            description: "Assist with sailing and maintenance tasks on a sailing yacht."
+            vesselSize: "51m–80m",
+            type: "Seasonal",
+            description: "Support sailing operations, maintain the deck’s cleanliness, assist with technical duties, and participate in mooring and docking procedures. A Yachtmaster qualification is preferred.",
+            location: "52m Sailing Yacht, Caribbean",
+            salary: "$4,000/month",
+            visaRequirement: "B1/B2 Visa",
+            startDate: "ASAP"
         },
         {
-            title: "Chef",
-            type: "Temporary",
+            title: "Sous Chef",
             yacht: "Motor",
             position: "Galley",
-            vesselSize: "81m-100m",
-            description: "Prepare gourmet meals for guests aboard a motor yacht."
-        },
-        {
-            title: "Engineer",
-            type: "Permanent",
-            yacht: "Motor",
-            position: "Engineering",
-            vesselSize: "101m+",
-            description: "Maintain and repair engine systems on a luxury yacht."
+            vesselSize: "81m–100m",
+            type: "Temporary",
+            description: "Create gourmet meals for guests and crew, handle menu planning and provisioning, and maintain high culinary standards.",
+            location: "81m Motor Yacht",
+            salary: "DOE but competitive",
+            startDate: "March"
         }
     ];
 
@@ -73,12 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
             jobDiv.classList.add("job");
             jobDiv.innerHTML = `
                 <div>
-                    <h3>${job.title}</h3>
+                    <h3>${job.title} (${job.location})</h3>
                     <p><strong>Type:</strong> ${job.type}</p>
                     <p><strong>Yacht:</strong> ${job.yacht}</p>
                     <p><strong>Position:</strong> ${job.position}</p>
                     <p><strong>Vessel Size:</strong> ${job.vesselSize}</p>
-                    <p>${job.description}</p>
+                    <p><strong>Description:</strong> ${job.description}</p>
+                    <p><strong>Salary:</strong> ${job.salary}</p>
+                    ${job.visaRequirement ? `<p><strong>Visa Requirement:</strong> ${job.visaRequirement}</p>` : ""}
+                    <p><strong>Start Date:</strong> ${job.startDate}</p>
                 </div>
                 <a href="#contacts" class="apply-btn">Apply</a>
             `;

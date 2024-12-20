@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column; 
     align-items: center;
-    gap: 10px; 
+    gap: 20px; 
     position: relative;
     z-index: 2;
     animation: fadeInUp 1.5s ease-out;
@@ -72,27 +72,43 @@
     font-weight: 400;
 }
 
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .hero-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    background: linear-gradient(90deg, #0066ff, #0044cc);
     color: #fff;
-    border: none;
-    border-radius: 30px;
     font-size: 18px;
     font-weight: 600;
+    text-transform: uppercase;
     text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    white-space: nowrap; /* Забороняє перенос тексту */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-button:hover {
-    background: linear-gradient(90deg, #0056b3, #003f7f);
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #0044cc, #002a99);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero-button:active {
-    transform: scale(1.05);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
