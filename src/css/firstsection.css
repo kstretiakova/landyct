@@ -1,5 +1,5 @@
 .hero-section {
-    background-image: linear-gradient(rgba(30, 30, 60, 0.5), rgba(30, 30, 60, 0.5)), url('/src/img/firstsection/Main.jpg');
+    background-image: linear-gradient(rgba(30, 30, 60, 0.5), rgba(30, 30, 60, 0.5)), url('/img/firstsection/Main.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
