@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const jobTypeSelect = document.getElementById("jobType");
     const yachtTypeSelect = document.getElementById("yachtType");
-    const positionSelect = document.getElementById("position");
+    const departmentSelect = document.getElementById("department");
     const vesselSizeSelect = document.getElementById("vesselSize");
     const keywordInput = document.getElementById("keyword");
     const jobList = document.getElementById("jobList");
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Service Stewardess",
             yacht: "Motor",
-            position: "Interior",
+            department: "Interior",
             vesselSize: "31m–50m",
             type: "Permanent",
             description: "Provide exceptional service for guests aboard a luxurious new build yacht. A solid knowledge of cocktails and wine is required.",
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Deckhand",
             yacht: "Sailing",
-            position: "Deck",
+            department: "Deck",
             vesselSize: "51m–80m",
             type: "Seasonal",
             description: "Support sailing operations, maintain the deck’s cleanliness, assist with technical duties, and participate in mooring and docking procedures. A Yachtmaster qualification is preferred.",
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             title: "Sous Chef",
             yacht: "Motor",
-            position: "Galley",
+            department: "Galley",
             vesselSize: "81m–100m",
             type: "Temporary",
             description: "Create gourmet meals for guests and crew, handle menu planning and provisioning, and maintain high culinary standards.",
@@ -47,17 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const keyword = keywordInput.value.toLowerCase();
         const jobType = jobTypeSelect.value;
         const yachtType = yachtTypeSelect.value;
-        const position = positionSelect.value;
+        const department = departmentSelect.value;
         const vesselSize = vesselSizeSelect.value;
 
         const filteredJobs = jobs.filter(job => {
             const matchesKeyword = keyword === "" || job.title.toLowerCase().includes(keyword) || job.description.toLowerCase().includes(keyword);
             const matchesJobType = jobType === "" || job.type === jobType;
             const matchesYachtType = yachtType === "" || job.yacht === yachtType;
-            const matchesPosition = position === "" || job.position === position;
+            const matchesDepartment = department === "" || job.department === department;
             const matchesVesselSize = vesselSize === "" || job.vesselSize === vesselSize;
 
-            return matchesKeyword && matchesJobType && matchesYachtType && matchesPosition && matchesVesselSize;
+            return matchesKeyword && matchesJobType && matchesYachtType && matchesDepartment && matchesVesselSize;
         });
 
         displayJobs(filteredJobs);
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3>${job.title} (${job.location})</h3>
                     <p><strong>Type:</strong> ${job.type}</p>
                     <p><strong>Yacht:</strong> ${job.yacht}</p>
-                    <p><strong>Position:</strong> ${job.position}</p>
+                    <p><strong>Department:</strong> ${job.department}</p>
                     <p><strong>Vessel Size:</strong> ${job.vesselSize}</p>
                     <p><strong>Description:</strong> ${job.description}</p>
                     <p><strong>Salary:</strong> ${job.salary}</p>
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Enable options and make headings inactive only when dropdown is open
-    [jobTypeSelect, yachtTypeSelect, positionSelect, vesselSizeSelect].forEach(select => {
+    [jobTypeSelect, yachtTypeSelect, departmentSelect, vesselSizeSelect].forEach(select => {
         select.addEventListener("click", () => {
             Array.from(select.options).forEach(option => {
                 option.disabled = false;
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".search-bar button").addEventListener("click", filterJobs);
 
     // Attach filter function to dropdowns
-    [jobTypeSelect, yachtTypeSelect, positionSelect, vesselSizeSelect].forEach(select => {
+    [jobTypeSelect, yachtTypeSelect, departmentSelect, vesselSizeSelect].forEach(select => {
         select.addEventListener("change", filterJobs);
     });
 
