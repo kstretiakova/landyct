@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/landyct/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/landyct/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/landyct/assets/index-DcacqLpY.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <a class="header-logo" href="/src/index.html">YPOJ</a>
+  <nav>
+      <a class="menu-name" href="#about">About Us</a>
+      <a class="menu-name" href="#jobs">Jobs</a>
+      <a class="menu-name" href="#contacts">Contacts</a>
+      <button class="apply-button-header">Apply Now</button>
+  </nav>
+  </div>
+</header>
+
+
+    <main>
+      <!-- Loads the specified .html file -->
+      <section id="about" class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Your Vision, Our Mission</h1>
+      <p>Empowering individuals with the tools and skills to achieve their dreams. Join us and take the first step towards your future today.</p>
+      <div class="button-group">
+        <a href="#jobs" class="hero-button">Find a Job</a>
+        <a href="#crew" class="hero-button">Find a Crew</a>
+      </div>
+    </div>
+  </div>
+</section>
+      <section id="jobs" class="jobs-section">
+    <div class="container">
+        <div class="content-wrapper">
+            <h2>Job Listings</h2>
+
+            <div class="search-bar">
+                <input type="text" id="keyword" placeholder="Job Title, Phrase or Keyword">
+                <button onclick="filterJobs()">Search</button>
+            </div>
+
+            <div class="filters">
+                <select id="jobType">
+                    <option value="">Job Type</option>
+                    <option value="Temporary">Temporary</option>
+                    <option value="Day Work">Day Work</option>
+                    <option value="Seasonal">Seasonal</option>
+                    <option value="Permanent">Permanent</option>
+                    <option value="Shoreside">Shoreside</option>
+                </select>
+                <select id="yachtType">
+                    <option value="">Yacht Type</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Sailing">Sailing</option>
+                </select>
+                <select id="department">
+                    <option value="">Position</option>
+                    <option value="Galley">Galley</option>
+                    <option value="Interior">Interior</option>
+                    <option value="Deck">Deck</option>
+                    <option value="Engineering">Engineering</option>
+                </select>
+                <select id="vesselSize">
+                    <option value="">Vessel Sizes</option>
+                    <option value="0-30m">0-30m</option>
+                    <option value="31m-50m">31m-50m</option>
+                    <option value="51m-80m">51m-80m</option>
+                    <option value="81m-100m">81m-100m</option>
+                    <option value="101m+">101m+</option>
+                </select>
+            </div>
+
+            <div class="jobs" id="jobList">
+                <!-- Jobs will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+      <section id="apply" class="apply-section">
+    <div class="container">
+        <div class="content-wrapper-apply-split">
+            <!-- Відео -->
+            <div class="apply-video">
+                <video autoplay loop muted>
+                    <source src="/landyct/assets/Video-yDB1l-kx.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Форма -->
+            <div class="apply-form-wrapper">
+                <h2>Apply for a Position</h2>
+                <form id="applyForm">
+                    <div class="form-group">
+                        <label for="jobPosition">Job Name Position</label>
+                        <input type="text" id="jobPosition" name="jobPosition" placeholder="Enter the position" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv">Upload Your CV</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        <label for="cv" class="file-upload-label">
+                            <i class="icon-folder"></i> Choose File
+                        </label>
+                        <p id="fileNameDisplay" class="file-name-display">No file selected</p> <!-- Елемент для імені файлу -->
+                    </div>
+                    <button type="submit" class="apply-button">Apply</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+      
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="column">
+      <h4>About Us</h4>
+      <p>Creative solutions with passion.</p>
+    </div>
+    <div class="column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h4>Stay Connected</h4>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
