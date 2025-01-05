@@ -31,6 +31,7 @@ h2 {
 
 /* Search Bar */
 .search-bar {
+  width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
