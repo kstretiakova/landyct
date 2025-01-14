@@ -18,8 +18,15 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
     "modern-normalize": "^3.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "description": ""
 }
