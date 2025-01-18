@@ -1,103 +1,129 @@
 .header {
-    background: rgba(255, 255, 255, 0.9); 
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 25px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    backdrop-filter: blur(8px); 
-    position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  position: fixed;
 }
 
 .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.2), rgba(0,0,0,0));
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  z-index: -1;
 }
 
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .header-logo {
-    font-family: "Poppins", sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    background: linear-gradient(50deg, #3c5875, #719dcc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(50deg, #3c5875, #719dcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 .header-logo:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .menu-name {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 .menu-name:hover {
-    color: #007bff;
-    transform: translateY(-2px);
+  color: #007bff;
+  transform: translateY(-2px);
 }
 
 .menu-name::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #007bff;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
 }
 
 .menu-name:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .apply-button-header {
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Для коректного вирівнювання */
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none; /* Прибираємо підкреслення */
+  text-align: center; /* Центруємо текст */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .apply-button-header:hover {
-    background: linear-gradient(90deg, #0056b3, #003f7f);
-    transform: scale(1.05);
+  background: linear-gradient(90deg, #0056b3, #003f7f);
+  transform: scale(1.05);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+
+  nav {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .menu-name, .apply-button-header {
+      font-size: 14px;
+  }
+
+  .header {
+      padding: 15px 0; /* Зменшуємо відступи для мобільних */
+  }
 }

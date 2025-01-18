@@ -12,10 +12,14 @@
             <!-- Форма -->
             <div class="apply-form-wrapper">
                 <h2>Apply for a Position</h2>
-                <form id="applyForm" action="/apply" method="POST" enctype="multipart/form-data">
+                <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                  <!-- Прихований input для access_key -->
+                  <input type="hidden" name="access_key" value="206d00ed-14ca-42c6-9087-e0178767f7bf">
+
+                  <!-- Поля форми -->
                   <div class="form-group">
                     <label for="jobPosition">Job Name Position</label>
-                    <input type="text" id="jobPosition" name="jobPosition" placeholder="Enter the position" required>
+                    <input type="text" id="jobPosition" name="jobPosition" placeholder="Selected position will appear here" readonly>
                   </div>
                   <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -29,12 +33,13 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                   </div>
-                  <div class="form-group">
-                    <label for="cv">Upload Your CV</label>
-                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-                  </div>
+
+                  <!-- Прихований input для перенаправлення після успіху -->
+                  <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                   <button type="submit" class="apply-button">Apply</button>
                 </form>
+
             </div>
         </div>
     </div>
