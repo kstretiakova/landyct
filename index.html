@@ -12,18 +12,18 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/landyct/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/landyct/assets/index-DDbb4Dlo.css">
+    <link rel="stylesheet" crossorigin href="/landyct/assets/index-D2GCBn-6.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <a class="header-logo" href="/src/index.html">YPOJ</a>
-  <nav>
+    <nav>
       <a class="menu-name" href="#about">About Us</a>
       <a class="menu-name" href="#jobs">Jobs</a>
       <a class="menu-name" href="#contacts">Contacts</a>
-      <button class="apply-button-header">Apply Now</button>
-  </nav>
+      <a href="#jobs" class="apply-button-header">Apply Now</a> <!-- Змінено кнопку на посилання -->
+    </nav>
   </div>
 </header>
 
@@ -104,10 +104,14 @@
             <!-- Форма -->
             <div class="apply-form-wrapper">
                 <h2>Apply for a Position</h2>
-                <form id="applyForm" action="/apply" method="POST" enctype="multipart/form-data">
+                <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                  <!-- Прихований input для access_key -->
+                  <input type="hidden" name="access_key" value="206d00ed-14ca-42c6-9087-e0178767f7bf">
+
+                  <!-- Поля форми -->
                   <div class="form-group">
                     <label for="jobPosition">Job Name Position</label>
-                    <input type="text" id="jobPosition" name="jobPosition" placeholder="Enter the position" required>
+                    <input type="text" id="jobPosition" name="jobPosition" placeholder="Selected position will appear here" readonly>
                   </div>
                   <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -121,17 +125,18 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                   </div>
-                  <div class="form-group">
-                    <label for="cv">Upload Your CV</label>
-                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-                  </div>
+
+                  <!-- Прихований input для перенаправлення після успіху -->
+                  <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                   <button type="submit" class="apply-button">Apply</button>
                 </form>
+
             </div>
         </div>
     </div>
 </section>
-      <section class="yacht-crew-section">
+      <section id="crew" class="yacht-crew-section">
   <div class="yacht-crew-container">
     <header class="yacht-crew-header">
       <h2>Request Your Yacht Crew Member</h2>
@@ -187,7 +192,7 @@
 </section>
     </main>
 
-    <footer class="footer">
+    <footer id="contacts" class="footer">
   <div class="container">
     <div class="column">
       <h4>Follow Us</h4>
