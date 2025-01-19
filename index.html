@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/landyct/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YpoJ Yachts</title>
+    <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/landyct/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/landyct/assets/index-CFO9db-G.css">
+    <link rel="stylesheet" crossorigin href="/landyct/assets/index-D2GCBn-6.css">
   </head>
   <body>
     <header class="header">
@@ -91,46 +91,51 @@
 </section>
 
       <section id="apply" class="apply-section">
-  <div class="content-wrapper-apply-split">
-    <!-- Зображення -->
-    <div class="apply-video">
-      <img src="/landyct/assets/applyf-BRhoKP8u.JPG" alt="Apply Background Image">
+    <div class="container-apply">
+        <div class="content-wrapper-apply-split">
+            <!-- Відео -->
+            <div class="apply-video">
+                <video autoplay loop muted>
+                    <source src="/landyct/assets/Video-DPmutA6h.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Форма -->
+            <div class="apply-form-wrapper">
+                <h2>Apply for a Position</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                  <!-- Прихований input для access_key -->
+                  <input type="hidden" name="access_key" value="206d00ed-14ca-42c6-9087-e0178767f7bf">
+
+                  <!-- Поля форми -->
+                  <div class="form-group">
+                    <label for="jobPosition">Job Name Position</label>
+                    <input type="text" id="jobPosition" name="jobPosition" placeholder="Selected position will appear here" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+
+                  <!-- Прихований input для перенаправлення після успіху -->
+                  <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                  <button type="submit" class="apply-button">Apply</button>
+                </form>
+
+            </div>
+        </div>
     </div>
-
-    <!-- Форма -->
-    <div class="apply-form-wrapper">
-      <h2>Apply for a Position</h2>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <!-- Прихований input для access_key -->
-        <input type="hidden" name="access_key" value="206d00ed-14ca-42c6-9087-e0178767f7bf">
-
-        <!-- Поля форми -->
-        <div class="form-group">
-          <label for="jobPosition">Job Name Position</label>
-          <input type="text" id="jobPosition" name="jobPosition" placeholder="Selected position will appear here" readonly>
-        </div>
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-
-        <!-- Прихований input для перенаправлення після успіху -->
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-        <button type="submit" class="apply-button">Apply</button>
-      </form>
-    </div>
-  </div>
 </section>
-
       <section id="crew" class="yacht-crew-section">
   <div class="yacht-crew-container">
     <header class="yacht-crew-header">
